@@ -1340,3 +1340,7 @@ class CartesianCore(PandasWrapper, GenericCore):
                                             index_dct)
         molecule2.index = [index_dct[i] for i in molecule2.index]
         return molecule2.loc[molecule1.index]
+    
+    def set_bonds(self, bond_dict):
+        """Set the bond_dict explicitly"""
+        self._metadata['bond_dict'] = bond_dict
